@@ -1,0 +1,25 @@
+[project]
+name = "echo-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "SADIKI Yahya", email = "yahyaaaass@proton.me" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.3",
+    "librosa",
+    "numpy",
+    "yolov8"
+]
+
+[project.scripts]
+echo-service = "echo_service:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
