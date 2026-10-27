@@ -4,14 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "SADIKI Yahya", email = "yahyaaaass@proton.me" }
+    { name = "yahya", email = "292057635+yahyasdotnet@users.noreply.github.com" }
 ]
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.3",
-    "librosa",
-    "numpy",
-    "yolov8"
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "spotipy>=2.26.0",
 ]
 
 [project.scripts]
@@ -20,6 +20,3 @@ echo-service = "echo_service:main"
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
-
-[tool.uv]
-package = false
