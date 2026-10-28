@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports: ["8080:8080"]
+    env_file: .env
+    volumes:
+      - ${MUSIC_DIR}:/music:ro
+      - ./data:/data
+    environment:
+      MUSIC_DIR: /music
+      DATA_DIR: /data

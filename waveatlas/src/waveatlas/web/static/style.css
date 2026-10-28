@@ -1,0 +1,4 @@
+:root { color-scheme: dark; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #0e1117; color: #e6e6e6; }
+main { max-width: 48rem; margin: 4rem auto; padding: 0 1rem; }
+pre { background: #161b22; padding: 1rem; border-radius: 8px; overflow-x: auto; }

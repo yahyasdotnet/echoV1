@@ -1,0 +1,40 @@
+[project]
+name = "waveatlas"
+version = "0.1.0"
+description = "Self-hosted taste engine: explore your music as a map, paint playlists as energy curves."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.0",
+    "gunicorn>=22.0",
+    "python-dotenv>=1.0",
+    "mutagen>=1.47",
+]
+
+[project.optional-dependencies]
+# Heavy ML stack, kept out of the web image. Install with: uv sync --extra analysis
+analysis = [
+    "numpy",
+    "scikit-learn",
+    "umap-learn",
+    "librosa",
+]
+
+[project.scripts]
+waveatlas = "waveatlas.app:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
